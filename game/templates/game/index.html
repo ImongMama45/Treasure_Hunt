@@ -114,6 +114,14 @@
             margin-bottom: 20px;
         }
 
+        .reward-image {
+            max-width: 100%; /* Ensures it scales down if the container is small */
+            height: auto;    /* Maintains the aspect ratio */
+            width: 60%;    /* Or whatever width you want */
+            margin: 20px auto; /* Center the image within its block-level context */
+            display: block;  /* Ensures the margin auto works */
+        }
+
         #answer-input {
             width: 100%;
             padding: 15px;
@@ -273,7 +281,8 @@
                 You've unlocked the treasure! Here's your reward:
             </p>
             <img 
-                src="https://via.placeholder.com/400x400/667eea/ffffff?text=WINNER!" 
+                height="10px"  width="auto"
+                src="{% static 'game/images/reward.png' %}" 
                 alt="Treasure Reward" 
                 class="reward-image"
             />
